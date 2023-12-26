@@ -1,0 +1,262 @@
+/* Importera Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0; /* Tar bort standardmarginalen från alla element */
+    padding: 0; /* Tar bort standardpadding från alla element */
+    box-sizing: border-box; /* Inkluderar padding och border i elementets totala bredd och höjd */
+    
+}
+
+body {
+    font-family: 'Raleway', sans-serif; /* Sätter standardtypsnittet till Raleway för hela sidan */
+}
+
+.page-container {
+    display: flex; /* Aktiverar flexbox */
+    flex-direction: column; /* Staplar elementen veriktalt */
+}
+
+.content-container {
+    display: flex; /* Aktiverar flexbox */
+    flex-direction: row; /* Staplar elementen horisontellt */
+}
+
+/* Stilar för rubrikerna h1 och h2 */
+h1, h2 {
+    font-family: 'Roboto', sans-serif; /* Sätter typsnittet för rubrikerna till Roboto */
+}
+
+h1 {
+    font-size: 3.5em; /* Sätter textstorleken */
+    font-weight: 700; /* Gör h1 fetstilt */
+}
+
+h1 .larger-text {
+    font-size: 1.55em; /* Sätter textstorleken */
+}
+
+h2 {
+    font-size: 1.2em; /* Sätter textstorleken */
+    font-weight: 400; /* Behåller h2 i normal texttjocklek */
+}
+
+/* Stilar för stycken */
+p {
+    font-family: 'Raleway', sans-serif; /* Sätter typsnittet för rubrikerna till Raleway */
+}
+
+/* Stil för headern, använder flexbox för att placera innehåll */
+header {
+    display: flex; /* Aktiverar flexbox, vilket gör det enklare att ordna elementen */
+    justify-content: space-between; /* Placerar utrymme mellan elementen så att de fördelas jämnt */
+    align-items: center; /* Centrerar elementen vertikalt i headern */
+    margin-left: 4em; /* Lägger till vänstermarginal på headern */
+}
+
+.branding {
+    text-transform: uppercase; /* Gör texten i versaler */
+    text-align: center; /* Centrerar textinnehållet */
+    margin-top: 0.5em; /* Lägger till toppmarginal */    
+}
+
+/* Rullande text med yrkesbenämningar under huvudrubriken */
+#dynamic-text {
+    position: absolute; /* Etablerar en referenspunkt för absolut positionering av inre span-element */
+    white-space: nowrap; /* Förhindrar radbrytning inom textelementet */
+    margin-left: 1em; /* Lägger till vänstermarginal */
+    text-align: justify;
+    /*overflow: hidden; /* Döljer innehåll som överskrider elementets bredd */ 
+}
+
+.dynamic-text-content {
+    position: absolute; /* Möjliggör fri positionering inom #dynamic-text */
+    opacity: 1; /* Gör elementet fullständigt transparent vid start */
+    transform: translateX(100%); /* Placerar elementet utanför skärmens högra kant */
+    animation: slide-in-out 8s ease-in-out infinite; /* Sätter igång en oändlig glidningsanimation */
+  }
+
+/* Animation som glider texten från vänster till höger */
+@keyframes slide-in-out {
+    0%, 100% {
+        opacity: 0;
+        transform: translateX(100%); /* Elementet glider ut till höger och försvinner */
+      }
+      5%, 45% {
+        opacity: 1;
+        transform: translateX(0); /* Elementet är helt synligt och centrerat */
+      }
+      55%, 95% {
+        opacity: 1;
+        transform: translateX(-100%); /* Elementet glider in från vänster och blir synligt */
+      }
+  }
+
+/* Applicerar animationen på #dynamic-text med viss varaktighet och ändlös loop */
+.dynamic-text-animation {
+    animation: slide-in-out 5s ease-in-out infinite;
+  }
+
+/* Navigation */
+
+/* Stil för navigationslistan, använder flexbox för att arrangera länkar horisontellt */
+nav ul {
+    list-style: none; /* Tar bort listmarkörerna för att rensa designen */
+    display: flex; /* Arrangerar listelementen på en rad */
+    margin-right: 2em; /* Lägger till högermarginal för navigationsmenyn */
+    margin-bottom: 7em; /* Lägger till bottenmarginal för navigationsmenyn */
+}
+
+/* Stil för varje listelement i navigationsmenyn */
+nav ul li {
+    margin-left: 1em; /* Lägger till vänstermarginal mellan navigationslänkarna */
+}
+
+/* Stil för varje ankare i navigationsmenyn */
+nav ul li a {
+    text-decoration: none; /* Tar bort understrykning från länkar */
+    font-weight: 700; /* Gör länkarna fetstilta */
+    color: black; /* Sätter färgen på länkarna till svart */
+    padding: 0.5em 1em; /* Lägger till padding runt länkarna för att öka klickområdet */
+    display: block; /* Lägger till block-nivå beteende till ankaret */
+    transition: letter-spacing 0.3s ease; /* Lägger till en övergångseffekt för avståndet mellan bokstäverna */
+}
+
+/* Hover-effekt för navigationslänkar */
+nav ul li a:hover {
+    letter-spacing: 0.2em; /* Ökar avståndet mellan bokstäverna när muspekaren hovras över länken */
+}
+
+/* Sidopanel och sociala länkar */
+aside {
+    width: 15em; /* Sätter bredden på sidopanelen */
+    margin-left: 4.3em; /* Lägger till vänstermarginal på sidopanelen */
+    margin-top: 1.25em; /* Lägger till toppmarginal på sidopanelen */
+}
+
+main {
+    flex-grow: 1; /* Låter huvudinnehåller ta upp resterande plats */
+}
+
+/* Stil profilbilden, gör den rund */
+.avatar img {
+    width: 80%; /* Ställer in bildbredden till att matcha 100% av sidopanelens bredd, vilket gör att bilden anpassar sig till storleken containern */
+    height: auto; /* Höjden justeras automatiskt för att behålla bildens ursprungliga aspektförhållande */
+    border-radius: 50%; /* Ger en cirkulär form till bilden genom att göra hörnens radie till hälften av elementets storlek */
+    display: block; /* Tar bort eventuellt vitt utrymme under bilden och gör att den intar hela bredden av sidopanelen */
+    margin: auto; /* Centrerar bilden horisontellt i containern när bredden är mindre än sidopanelens bredd */
+    margin-top: 1.5em; /* Lägger till toppmarginal på sidopanelen */
+    margin-bottom: 2em; /* Lägger till bottenmarginal på avatar-containern */
+}
+
+/* Stil för sammanfattningen/om mig i sidopanelen */
+.about-me {
+    font-size: 1em; /* Ställer in textstorleken på stycket */
+    text-align: justify; /* Fördelar stycket jämnt */    
+}
+
+/* Stil för sociala länkarna, placerar ikonerna i en rad */
+.social-links {
+    display: flex; /* Använder flexbox för att arrangera ikonlänkarna horisontellt */
+    justify-content: flex-start; /* Justerar ikonlänkarna till vänster om behållaren */
+    gap: 15px; /* Skapar utrymme mellan ikonerna */
+    margin-left: 1.5em; /* Lägger till vänstermarginal på ikonerna */
+    margin-top: 1.25em; /* Lägger till toppmarginal på ikonerna */    
+}
+
+/* Stil för ikonerna */
+.social-links a {
+    font-size: 2.5em; /* Sätter storleken på ikonerna */
+    color: #000; /* Sätter färgen på ikonerna till svart */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smidig övergång för färg och storleksändring vid hover */
+    display: inline-block; /* Gör det möjligt för transform att tillämpas på ikonerna */
+}
+
+/* Hover-effekt för ikonerna */
+.social-links a:hover {
+    color: #888; /* Färgen ikonerna kommer att övergå till när musen är över */
+    transform: scale(1.2); /* Förstorar ikonerna till 120% av ursprunglig storlek */
+}
+
+/* Stil för fotnot*/
+footer {
+    font-size: 0.7em; /* Sätter textstorleken på fotnoten */
+    font-style: italic; /* Sätter textstilen till kursiv */
+    margin-left: 7em; /* Lägger till vänstermarginal på fotnoten */
+    margin-top: 1.25em; /* Lägger till toppmarginal på fotnoten */
+}
+
+/* Stil för bildspelscontainern */
+.slideshow-container {
+    max-width: 700px; /* Maxbredd för bildspel */
+    margin-left: 20em;
+    margin-top: -5em;
+    position: relative; /* Relativ positionering för positionering av knappar */    
+  }
+  
+  /* Göm bilderna som standard */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Gemensam stil för pilarna */
+.prev, .next {
+    cursor: pointer; /* Lägg till en pekare när man hovrar över föregående och nästa knappar */
+    position: absolute; /* Absolut positionering inom slideshow-container */
+    top: 50%; /* Placerar pilarna i mitten vertikalt */
+    width: auto; /* Bredd bestäms av innehållet (ikonen) */
+    padding: 16px; /* Lägg till utrymme runt ikonerna */
+    margin-top: -22px; /* Justera detta värde så att det passar storleken på dina ikoner */
+    color: #000; /* Färg på pilarna */
+    font-weight: bold; /* Gör texten fet */
+    font-size: 18px; /* Storlek på pilarna */
+    transition: 0.6s ease; /* Övergångseffekt för hover */
+    border-radius: 0 3px 3px 0; /* Runda kanter på höger sida för ".prev" */
+    user-select: none; /* Hindrar texten från att kunna väljas */
+  }
+  
+  /* Specifik stil för vänster pil */
+.prev {
+    left: 0; /* Placerar pilen på vänster sida */
+    border-radius: 3px 0 0 3px; /* Runda kanter på vänster sida */
+    z-index: 10; /* Se till att pilarna är ovanför andra element */
+  }
+
+/* Specifik stil för höger pil */
+.next {
+    right: 0; /* Placerar pilen på höger sida */
+    border-radius: 0 3px 3px 0; /* Runda kanter på höger sida */
+    z-index: 10; /* Se till att pilarna är ovanför andra element */
+  }
+
+/* Hover-effekt för pilarna */
+.prev:hover, .next:hover {
+    background-color: #888; /* Lägger till en mörk bakgrund vid hover */
+  }
+
+  /* Stil för punkterna/cirklarna */
+  .dot {
+    cursor: pointer; /* Pekarens utseende som en hand */
+    height: 15px; /* Höjd på varje punkt */
+    width: 15px; /* Bredd på varje punkt */
+    margin: 0 2px; /* Marginal runt punkterna */
+    background-color: #bbb; /* Bakgrundsfärg på inaktiva punkter */
+    border-radius: 50%; /* Gör punkterna cirkulära */
+    display: inline-block; /* Visar punkterna på rad */
+  }
+  
+.active, .dot:hover {
+    background-color: #717171; /* Bakgrundsfärg för aktiv punkt eller vid hover */
+  }
+  
+  /* Animation för att blekna in och ut */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+@keyframes fade {
+    from {opacity: .4} /* Starta med låg opacitet */
+    to {opacity: 1} /* Öka opacitet till fullt vid slutet */
+  }  

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicky Variety - Digital Artist</title>
+    <!-- Länk till ikoner (FontAwesome) -->
+    <script src="https://kit.fontawesome.com/b88d50a651.js" crossorigin="anonymous"></script>
+    <!-- Länk till CSS-fil-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header-sektion -->
+        <header>
+            <!-- Rubrik med rullande yrkesbenämningar-->
+            <div class="branding">
+                <h1><span class="larger-text">Vicky</span><br>Variety</h1>
+                <h2 id="dynamic-text"><span class="dynamic-text-content">Digital Artist</span></h2>
+            </div>
+        <!-- Navigationsmeny -->
+        <nav>
+            <ul>
+                <li><a href="#portfolio">PORTFOLIO</a></li>            
+                <li><a href="#tutorials">TUTORIALS</a></li>
+                <li><a href="#resume">RESUME</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        </header>
+        <div class="content-container">    
+            <!-- Sidopanel med personlig information och sociala länkar-->
+            <aside>
+                <div class="avatar">
+                    <img src="img/VickyVariety-Portfolio-Avatar.png" alt="Avatar">         
+                </div>
+                <div class="about-me">
+                    <p>I'm a 3D artist and digital design instructor, constantly exploring the ever-evolving landscape of IT and digital design to enhance my skills. I love sharing my knowledge through tutorials, creating guides that resonate and uplift aspiring artists and tech enthusiasts alike.</p>
+                </div>    
+            <!-- Sociala länkar-->
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/victoria-wendelid-173879269" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/moriafyre" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:vickyvariety@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/vickyvariety" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            </aside>
+            <main>
+            <!-- Bildspelscontainer -->
+            <div class="slideshow-container">
+
+                <!-- Helskärmsbilder med nummer och bildtext -->
+                
+                <!-- Bild 1 -->
+                <div class="mySlides fade">
+                    <img src="img/Armchair-3Dscene.png" style="width:100%">        
+                </div>
+
+                <!-- Bild 2 -->
+                <div class="mySlides fade">
+                    <img src="img/Modern-Sofa-Scene.png" style="width:100%">        
+                </div> 
+                
+                <!-- Bild 3 -->
+                <div class="mySlides fade">
+                    <img src="img/Facial-Cleansing-Bottle.png" style="width:100%">        
+                </div>
+
+                <!-- Bild 4 -->
+                <div class="mySlides fade">
+                    <img src="img/Galaxy_PotionBottle.png" style="width:100%">        
+                </div>
+
+                <!-- Knappar för nästa och föregående bild -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- Punkter/cirklar för att visa vilken bild som är aktiv -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        
+            <!-- Mer innehåll som portfolio, om mig, etc. kommer läggas här -->
+            </main>
+        </div>
+    </div>
+
+        <!-- Fotnot med upphovsrätt och annan info -->
+        <footer>
+            <p>&copy; 2023 Vicky Variety. All rights reserved.</p>
+        </footer>
+
+        <!-- Javascript-filer -->
+
+        <!-- Text-scroller för headern -->
+        <script src="scripts/text-scroller.js"></script>        
+
+        <!-- Bildgalleri/Slideshow -->
+        <script src="scripts/slideshow.js"></script>
+</body>
+</html>
