@@ -189,15 +189,37 @@ footer {
 
 /* Stil för bildspelscontainern */
 .slideshow-container {
-    max-width: 700px; /* Maxbredd för bildspel */
+    max-width: 10rem; /* Maxbredd för bildspel */
     margin-left: 20em;
-    margin-top: -5em;
+    margin-top: 10em;
     position: relative; /* Relativ positionering för positionering av knappar */    
   }
   
   /* Göm bilderna som standard */
   .mySlides {
     display: none;
+  }
+
+  /* Stil för miniatyrbildernas container */
+  .row {
+    display: flex;
+  }
+
+  /* Stil för varje miniatyrbild */
+  .column {
+    flex: 15%;
+    max-width: 15%;
+    padding: 5px;
+  }
+
+  /* Stil för miniatyrbilderna */
+  .demo {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  .demo:hover {
+    opacity: 1;
   }
   
   /* Gemensam stil för pilarna */

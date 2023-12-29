@@ -9,6 +9,7 @@ function plusSlides(n) {
 // Funktion för att styra vilken bild som är aktiv baserat på miniatyrbildernas kontroller
 function currentSlide(n) {
   showSlides(slideIndex = n); /* Visar den valda bilden */
+  updateThumbnails(n);
 }
 
 function showSlides(n) {
@@ -24,4 +25,11 @@ function showSlides(n) {
       dots[i].className = dots[i].className.replace(" active", ""); /* Ta bort 'active' klassen från alla punkter */
   }
   slides[slideIndex-1].style.display = "block";
+}
+
+function updateThumbnails(n) {
+  var thumbnails = document.getElementsByName("demo");
+  for (var i = 0; i <thumbnails.length; i++)) {
+    thumbnails[i].style.opacity = (i + 1 === n) ? "1" : "0.6"; // Markerar den aktiva miniatyrbilden
+  }
 }
