@@ -189,88 +189,88 @@ footer {
 
 /* Stil för bildspelscontainern */
 .slideshow-container {
-  max-width: 27em; /* Maxbredden för bildspelet, begränsar bredden till 27em */
-  margin-left: 25em; /* Positionerar bildspelet med en marginal från vänsterkanten */
-  margin-top: -5em; /* Justerar överkanten av bildspelet uppåt med 5em */
-  position: relative; /* Sätter en relativ position för att tillåta absolut positionering av barn-element */
+    max-width: 27em; /* Maxbredden för bildspelet, begränsar bredden till 27em */
+    margin-left: 25em; /* Positionerar bildspelet med en marginal från vänsterkanten */
+    margin-top: -5em; /* Justerar överkanten av bildspelet uppåt med 5em */
+    position: relative; /* Sätter en relativ position för att tillåta absolut positionering av barn-element */
 }
 
 /* Dölj alla bildspelsbilder som standard */
 .mySlides {
-  display: none; /* Gör så att alla bilder i bildspelet inte visas initialt */
+    display: none; /* Gör så att alla bilder i bildspelet inte visas initialt */
 }
 
 /* Stil för containern som håller miniatyrbilderna */
 .row {
-  display: flex; /* Använder flexbox-layout för att ordna miniatyrbilder horisontellt */
-  margin-left: 26em; /* Justerar positionen från vänsterkanten */
+    display: flex; /* Använder flexbox-layout för att ordna miniatyrbilder horisontellt */
+    margin-left: 26em; /* Justerar positionen från vänsterkanten */
 }
 
 /* Stil för varje miniatyrbild */
 .column {
-  flex: 6.5em; /* Flex-värde för att justera bredden på varje miniatyrbild */
-  max-width: 6.2em; /* Maxbredd för varje miniatyrbild */
-  padding: 0.2em; /* Lägger till lite utrymme runt varje miniatyrbild */
-  padding-top: 1em; /* Extra utrymme ovanför varje miniatyrbild */
+    flex: 6.5em; /* Flex-värde för att justera bredden på varje miniatyrbild */
+    max-width: 6.2em; /* Maxbredd för varje miniatyrbild */
+    padding: 0.2em; /* Lägger till lite utrymme runt varje miniatyrbild */
+    padding-top: 1em; /* Extra utrymme ovanför varje miniatyrbild */
 }
 
 /* Stil för varje miniatyrbild */
 .column {
-  flex: 6.5em; /* Ställer in flex-värdet för varje miniatyrbild, vilket påverkar hur de växer och krymper i förhållande till andra flex-element */
-  max-width: 6.2em; /* Anger en maximal bredd för varje miniatyrbild för att säkerställa en enhetlig storlek */
-  padding: 0.2em; /* Lägger till en liten padding runt varje miniatyrbild för att skapa utrymme mellan dem */
-  padding-top: 1em; /* Lägger till extra padding på toppen av varje miniatyrbild för att skapa visuellt utrymme */
+    flex: 6.5em; /* Ställer in flex-värdet för varje miniatyrbild, vilket påverkar hur de växer och krymper i förhållande till andra flex-element */
+    max-width: 6.2em; /* Anger en maximal bredd för varje miniatyrbild för att säkerställa en enhetlig storlek */
+    padding: 0.2em; /* Lägger till en liten padding runt varje miniatyrbild för att skapa utrymme mellan dem */
+    padding-top: 1em; /* Lägger till extra padding på toppen av varje miniatyrbild för att skapa visuellt utrymme */
 }
 
 /* Stil för miniatyrbilderna i bildspelet */
 .demo {
-  opacity: 0.6; /* Grundläggande opacitet för miniatyrbilder, gör dem lite genomskinliga */
-  cursor: pointer; /* Ändrar muspekaren till en pekare för att indikera klickbarhet */
+    opacity: 0.6; /* Grundläggande opacitet för miniatyrbilder, gör dem lite genomskinliga */
+    cursor: pointer; /* Ändrar muspekaren till en pekare för att indikera klickbarhet */
 }
 
 /* Hover-effekt för miniatyrbilderna */
 .demo:hover {
-  opacity: 1; /* Ökar opaciteten till full när muspekaren är över miniatyrbilden */
+    opacity: 1; /* Ökar opaciteten till full när muspekaren är över miniatyrbilden */
 }
 
 /* Stil för den aktiva miniatyrbilden */
 .demo.active {
-  opacity: 1; /* Sätter full opacitet för den aktiva miniatyrbilden */
+    opacity: 1; /* Sätter full opacitet för den aktiva miniatyrbilden */
 }
   
 /* Gemensam stil för pilarna */
 .prev, .next {
-  cursor: pointer; /* Lägger till en pekare när man hovrar över föregående och nästa pilarna */
-  position: absolute; /* Absolut positionering inom slideshow-container */
-  top: 50%; /* Placerar pilarna i mitten vertikalt */
-  width: auto; /* Bredden bestäms av innehållet*/
-  padding: 20px; /* Lägger till utrymme runt pilarna */
-  margin-top: -50px;
-  color: #000; /* Färg på pilarna */
-  font-weight: bold; /* Gör texten fet */
-  font-size: 18px; /* Storlek på pilarna */
-  transition: 0.6s ease; /* Övergångseffekt för hover */
-  border-radius: 0 3px 3px 0; /* Runda kanter på höger sida för ".prev" */
-  user-select: none; /* Hindrar texten från att kunna väljas */
+    cursor: pointer; /* Lägger till en pekare när man hovrar över föregående och nästa pilarna */
+    position: absolute; /* Absolut positionering inom slideshow-container */
+    top: 50%; /* Placerar pilarna i mitten vertikalt */
+    width: auto; /* Bredden bestäms av innehållet*/
+    padding: 20px; /* Lägger till utrymme runt pilarna */
+    margin-top: -50px;
+    color: #000; /* Färg på pilarna */
+    font-weight: bold; /* Gör texten fet */
+    font-size: 18px; /* Storlek på pilarna */
+    transition: 0.6s ease; /* Övergångseffekt för hover */
+    border-radius: 0 3px 3px 0; /* Runda kanter på höger sida för ".prev" */
+    user-select: none; /* Hindrar texten från att kunna väljas */
 }
   
 /* Specifik stil för vänster pil */
 .prev {
-  left: 0; /* Placerar pilen på vänster sida */
-  border-radius: 3px 0 0 3px; /* Runda kanter på vänster sida */
-  z-index: 10; /* Se till att pilarna är ovanför andra element */
+    left: 0; /* Placerar pilen på vänster sida */
+    border-radius: 3px 0 0 3px; /* Runda kanter på vänster sida */
+    z-index: 10; /* Se till att pilarna är ovanför andra element */
 }
 
 /* Specifik stil för höger pil */
 .next {
-  right: 0; /* Placerar pilen på höger sida */
-  border-radius: 0 3px 3px 0; /* Runda kanter på höger sida */
-  z-index: 10; /* Se till att pilarna är ovanför andra element */
+    right: 0; /* Placerar pilen på höger sida */
+    border-radius: 0 3px 3px 0; /* Runda kanter på höger sida */
+    z-index: 10; /* Se till att pilarna är ovanför andra element */
 }
 
 /* Hover-effekt för pilarna */
 .prev:hover, .next:hover {
-  background-color: #888; /* Lägger till en mörk bakgrund vid hover */
+    background-color: #888; /* Lägger till en mörk bakgrund vid hover */
 }
 
 /* Stil för punkterna/cirklarna */
